@@ -26,8 +26,8 @@ const NewColorForm =({addColor})=>{
             <input id="color" type="text" placeholder="color" name="color" value={formData.color} onChange={handleChange} />
         </div>
         <div>
-        <label htmlFor="hex">HEX value: </label>
-            <input id="hex" type="text" placeholder="ex. #fcba03" name="hex" value={formData.hex} onChange={handleChange} />
+    <label htmlFor="hex">HEX value: {formData.hex}</label> <br />
+            <input id="hex" type="color" name="hex" value={formData.hex} onChange={handleChange} />
         </div>
         <button>Add Color!</button>
     </form>

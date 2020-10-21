@@ -1,20 +1,16 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
-const ColorIndex =(props)=>{
-    const colors = props.colors;
-    console.log("colors from index", typeof colors, colors)
-    console.log("inoming", typeof colors)
-    //why do I have to use Object.keys
-    // let newColors = JSON.parse(colors)
-    const links = Object.keys(colors).map((color,idx)=>(
+const ColorIndex =({colors})=>{
+    
+    const links = colors.map((color,idx)=>(
         <div>
-            {console.log("color",color,idx, typeof color)}
-            <NavLink key={idx} to={`/colors/${color.name}`}>{color.name}</NavLink>
+            {console.log("color", color,idx)}
+            <NavLink key={idx} to={`/colors/${color.color}`}>{color.color}</NavLink>
         </div>))
 
     return(<>
-    <h1>This is the Color Index</h1>
+    <h1>This is the Color Factory</h1>
     <div>
         <NavLink to='/colors/new'>Add a new color here</NavLink>
     </div>
@@ -22,8 +18,12 @@ const ColorIndex =(props)=>{
     { links}
     
     </div>
-    <div></div>
-
     </>)
 }
 export default ColorIndex;
+
+
+// console.log("colors from index", colors)
+// console.log("inoming", Array.isArray(colors))
+//why do I have to use Object.keys
+// let newColors = JSON.parse(colors)

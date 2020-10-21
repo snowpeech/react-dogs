@@ -1,0 +1,16 @@
+.Nav {
+  margin: 1rem;
+}
+
+.Nav a {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.Nav a.active {
+  margin: 0.5rem;
+  color: rgba(0, 0, 0, 1);
+  border: 1px solid grey;
+  border-radius: 5px;
+}
